@@ -4,7 +4,7 @@ data "aws_ami" "amazon-linux-3" {
 
   filter {
     name   = "name"
-    values = ["al2023-ami-2023*"] 
+    values = ["al2023-ami-2023*"]
   }
 
   filter {
@@ -40,8 +40,4 @@ resource "aws_s3_bucket" "example" {
 
 resource "aws_s3_bucket" "example1" {
   bucket = "my-tf-tzxxxxest-bucket"
-}
-
-resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
 }
